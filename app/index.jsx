@@ -11,7 +11,7 @@ import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import docImage1 from "../assets/images/doctor2.png";
-import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
+import { SimpleLineIcons, Entypo, AntDesign } from "@expo/vector-icons";
 
 export default function HomeScreen() {
   return (
@@ -29,7 +29,7 @@ export default function HomeScreen() {
         </View>
         {/* First card */}
         <View className="pt-8">
-          <View className="bg-[#4894FE] rounded-lg pt-4 px-5 pb-5 ">
+          <View className="bg-[#4894FE] rounded-2xl pt-4 px-5 pb-5 ">
             <View className="flex-row justify-between content-center items-center">
               <View className="flex-row ">
                 <Image source={docImage} />
@@ -124,6 +124,29 @@ export default function HomeScreen() {
           </View>
         </View>
         {/* Footer section */}
+        <View className="mt-20 flex-row justify-around items-center">
+          <View className="flex-row items-center">
+            <Entypo name="home" size={30} color="#63B4FF" />
+            <Text className="text-[#63B4FF] ml-2 font-bold">Home</Text>
+          </View>
+          <View>
+            <MaterialCommunityIcons
+              name="calendar-multiselect"
+              size={30}
+              color="#63B4FF"
+            />
+          </View>
+          <View>
+            <Ionicons
+              name="chatbox-ellipses-outline"
+              size={30}
+              color="#63B4FF"
+            />
+          </View>
+          <View>
+            <AntDesign name="user" size={30} color="#63B4FF" />
+          </View>
+        </View>
       </SafeAreaView>
     </>
   );
